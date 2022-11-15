@@ -29,10 +29,25 @@ html {
 }
 
 .weather {
-    align-items: flex-start;
-    background-color: whitesmoke;
+    background: rgb(191, 192, 191);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgb(0, 133, 202);
+    color: rgb(0, 0, 0);
     display: inline-block;
-    height: 10px;
-    margin: 0;
-    justify-content: flex-start;
+    flex: 1;
+    font-size: medium;
+    margin: 10px 5px;
+    padding: 10px 15px;
+}
+
+.box {
+    background: rgb(191, 192, 191);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgb(0, 133, 202);
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    flex: 1;
+    font-size: medium;
+    margin: 10px 5px;
+    padding: 10px 15px;
 }
