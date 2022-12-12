@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
-    <script href="assets/script.js"></script>
+    
     <title>Weather Dashboard</title>
 </head>
 <body>
     <h1 class="head">Weather Dashboard</h1>
+    <div class="main-container">
     <aside>
         <div class="container">
             <h2>Search for a City:</h2>
             <p class="seabox">
-                <input class="input" type="text" placeholder="Input City">
+                <input class="cityInput" type="text" placeholder="Input City">
             </p>
-            <button class="btn"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" 
+            <button id="searchBtn"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" 
                 width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"></path><path d="M11.412,8.586C11.791,8.966,12,9.468,12,10h2c0-1.065-0.416-2.069-1.174-2.828c-1.514-1.512-4.139-1.512-5.652,0 l1.412,1.416C9.346,7.83,10.656,7.832,11.412,8.586z"></path></svg>
             </button>
             <ul>
@@ -40,9 +41,11 @@
         <div class="wind">Wind Speed: 7mph</div>
         <div class="visibility">Visibility: 2 mi</div>
     </section>
+    </div>
 
-    <section id="boxes">
-        <h2>5 Day Forecast:</h2>
+    <section>
+        <h2 id="title">5 Day Forecast:</h2>
+        <div id="boxes">
         <div class="box" id="day">
             <h3 class="forecast">Day 1</h3>
             <div class="temp">31°F</div>
@@ -88,6 +91,8 @@
             <div class="wind">Wind Speed: 7mph</div>
             <div class="visibility">Visibility: 2 mi</div>
         </div>
+        </div>
     </section>
+    <script href="./assets/script.js"></script>
 </body>
 </html>

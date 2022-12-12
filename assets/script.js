@@ -1,20 +1,25 @@
-var cityInput = document.querySelector(".input")
-var searchBtn = document.querySelector(".btn")
+var cityInput = document.querySelector(".cityInput")
+var searchBtn = document.querySelector("#searchBtn")
 var descri = document.querySelector(".description")
 var temp = document.querySelector(".temp")
 var wind = document.querySelector(".wind")
 var humidity = document.querySelector(".humditiy")
 var visibility = document.querySelector(".visibilty")
+var apiKey = "edde692e58d867434cd1d621048e49c2"
 
+searchBtn.addEventListener('click', ()=>{
+    console.log("click")
+var cityName = cityInput.value
+console.log(cityName)
+apiCall(cityName)
 
-searchBtn.addEventListener('click', function(){
-    var citySearch = {
-        function () {
-            fetch("http://api.openweathermap.org/geo/1.0/direct?q="+cityInput.value+"&limit=7&appid=edde692e58d867434cd1d621048e49c2"
-            )
-            .then(response => response.json())
-            .then(data => console.log(data))
-        }
-    }
 })
 
+function apiCall(city) {
+    var url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+    fetch(url)
+    .then((response)=>{return response.json()})
+    .then((data)=>{
+        console.log(data)
+    })
+}
