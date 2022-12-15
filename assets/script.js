@@ -21,5 +21,7 @@ function apiCall(city) {
     .then((response)=>{return response.json()})
     .then((data)=>{
         console.log(data)
+        var lat = data.coord.lat
+        var lon = data.coord.lon
     })
 }
