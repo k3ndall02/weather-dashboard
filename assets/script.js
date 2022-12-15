@@ -25,3 +25,7 @@ function apiCall(city) {
         var lon = data.coord.lon
     })
 }
+
+function apiCall(lat, lon) {
+    var url=`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`
+}
